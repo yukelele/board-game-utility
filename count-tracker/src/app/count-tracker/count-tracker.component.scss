@@ -1,0 +1,23 @@
+.center {
+    text-align: center;
+}
+table>td,th{
+    margin-right: 5em;
+    margin-left: 5em;
+    color: red;
+}
+.vertical-border {
+    border-right: solid 0.1em black;
+}
+#plus-button {
+    font-size: 3em;
+    border-radius: 50%;
+    padding-left: 0.55em;
+    padding-right: 0.55em;
+}
+#minus-button {
+    font-size: 3em;
+    border-radius: 50%;
+    padding-left: 0.65em;
+    padding-right: 0.65em;
+}

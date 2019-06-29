@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CountTrackerComponent } from './count-tracker/count-tracker.component';
+import { ButtonModule } from 'primeng/button';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { CountTrackerComponent } from './count-tracker/count-tracker.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
