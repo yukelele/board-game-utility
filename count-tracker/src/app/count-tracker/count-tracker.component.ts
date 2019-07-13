@@ -17,9 +17,13 @@ export class CountTrackerComponent implements OnInit {
 
   AddTracker() {
     const current_size = this.trackers.length;
-    const new_tracker = {title: `tracker${current_size + 1}`, counter: 0};
+    const new_tracker = {title: 'tracker', counter: 0};
 
     this.trackers.push(new_tracker);
+  }
+
+  DeleteTracker(index: number) {
+    this.trackers.splice(index, 1);
   }
 
   AddOne(index: number) {

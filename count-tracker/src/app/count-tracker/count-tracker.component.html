@@ -6,13 +6,18 @@
 
   <table id="table" class="table-striped table-hover" align="center">
     <tr>
+      <th></th>
       <th class="vertical-border">TITLE</th>
       <th></th>
       <th>COUNTER</th>
       <th></th>
     </tr>
     <tr *ngFor="let tracker of trackers; index as idx">
+      <td>
+        <i class="fa fa-trash pointer" (click)="DeleteTracker(idx)"></i>
+      </td>
       <td class="vertical-border">
+        <input type="text" placeholder="{{tracker.title}}"/>
         {{tracker.title}}
       </td>
       <td>
