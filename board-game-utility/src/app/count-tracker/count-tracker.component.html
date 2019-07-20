@@ -1,34 +1,32 @@
-<div class="jumbotron center">
-  <h1 class="display-4">Count Tracker</h1>
-  <hr />
+<h1>Count Tracker</h1>
+<hr />
 
-  <button type=button (click)="AddTracker()">ADD</button>
+<button type=button (click)="AddTracker()">ADD</button>
 
-  <table id="table" class="table-striped table-hover" align="center">
-    <tr>
-      <th></th>
-      <th class="vertical-border">TITLE</th>
-      <th></th>
-      <th>COUNTER</th>
-      <th></th>
-    </tr>
-    <tr *ngFor="let tracker of trackers; index as idx">
-      <td>
-        <i class="fa fa-trash pointer" (click)="DeleteTracker(idx)"></i>
-      </td>
-      <td class="vertical-border">
-        <input type="text" placeholder="{{tracker.title}}"/>
-        {{tracker.title}}
-      </td>
-      <td>
-        <button id="plus-button" type="button" class="btn btn-primary btn-lg" (click)="AddOne(idx)">+</button>
-      </td>
-      <td>
-        {{tracker.counter}}
-      </td>
-      <td>
-        <button id="minus-button" type="button" class="btn btn-secondary btn-lg" (click)="MinusOne(idx)">-</button>
-      </td>
-    </tr>
-  </table>
-</div>
+<table id="table" class="table-striped table-hover" align="center">
+  <tr>
+    <th></th>
+    <th class="vertical-border">TITLE</th>
+    <th></th>
+    <th>COUNTER</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let tracker of trackers; index as idx">
+    <td>
+      <i class="fa fa-trash pointer" (click)="DeleteTracker(idx)"></i>
+    </td>
+    <td class="vertical-border">
+      <input type="text" placeholder="{{tracker.title}}"/>
+      {{tracker.title}}
+    </td>
+    <td>
+      <button id="plus-button" type="button" class="btn btn-primary btn-lg" (click)="AddOne(idx)">+</button>
+    </td>
+    <td>
+      {{tracker.counter}}
+    </td>
+    <td>
+      <button id="minus-button" type="button" class="btn btn-secondary btn-lg" (click)="MinusOne(idx)">-</button>
+    </td>
+  </tr>
+</table>
