@@ -1,0 +1,43 @@
+<h1>Dice Roller</h1>
+
+<table class="table-striped table-hover" align="center">
+  <tr>
+    <th class="vertical-border">
+      <button class="pointer" type="button" (click)="AddDice()">ADD</button>
+    </th>
+    <th></th>
+    <th>
+      Title
+    </th>
+    <th class="vertical-border">
+      Side
+    </th>
+    <th></th>
+    <th>
+      Roll
+    </th>
+  </tr>
+  <tr *ngFor="let die of dice; index as idx">
+    <td class="vertical-border">
+      #{{idx + 1}}
+    </td>
+    <td>
+      <button class="pointer" [disabled]="isOnlyOneDice">
+        <i class="fa fa-trash pointer" (click)="DeleteDice(idx)"></i>
+      </button>
+    </td>
+    <td>
+      <input style="text-align: center" type="text" [(ngModel)]="die.title"/>
+    </td>
+    <td class="vertical-border">
+        <input style="text-align: center" type="number" [(ngModel)]="die.side"/>
+    </td>
+    <td>
+      <button type="button" (click)=rollDice(idx)>ROLL</button>
+    </td>
+    <td [ngStyle]="{'background': diceRollColor[idx]}">
+      <span style="font-size: 2em">{{die.roll}}</span>
+    </td>
+  </tr>
+    
+</table>
