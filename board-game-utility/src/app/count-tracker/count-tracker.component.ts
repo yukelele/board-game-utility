@@ -8,29 +8,33 @@ import { Tracker } from '../model/tracker';
 })
 export class CountTrackerComponent implements OnInit {
 
-  trackers: Tracker[] = [{title: 'tracker1', counter: 0}];
+  trackers: Tracker[] = [{title: 'tracker', counter: 0}];
 
-  constructor() { }
+  isOnlyOneTracker = true;
 
-  ngOnInit() {
-  }
+  constructor() {}
 
-  AddTracker() {
-    const current_size = this.trackers.length;
+  ngOnInit() {}
+
+  AddTracker(): void {
     const new_tracker = {title: 'tracker', counter: 0};
 
     this.trackers.push(new_tracker);
+
+    this.isOnlyOneTracker = this.trackers.length == 1 ? true : false;
   }
 
-  DeleteTracker(index: number) {
+  DeleteTracker(index: number): void {
     this.trackers.splice(index, 1);
+
+    this.isOnlyOneTracker = this.trackers.length == 1 ? true : false;
   }
 
-  AddOne(index: number) {
+  AddOne(index: number): void {
     this.trackers[index].counter++;
   }
 
-  MinusOne(index: number) {
+  MinusOne(index: number): void {
     this.trackers[index].counter--;
   }
 

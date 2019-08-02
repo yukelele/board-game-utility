@@ -2,14 +2,17 @@
     cursor: pointer;
 }
 
-table>td,th{
+table>th{
     margin-right: 5em;
     margin-left: 5em;
-    color: red;
 }
+
+// Display Vertical Border Line
 .vertical-border {
     border-right: solid 0.1em black;
+    padding-right: 0.5em;
 }
+
 #plus-button {
     font-size: 3em;
     border-radius: 50%;
@@ -21,4 +24,13 @@ table>td,th{
     border-radius: 50%;
     padding-left: 0.65em;
     padding-right: 0.65em;
+}
+
+// Remove Up and Down Arrow
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }

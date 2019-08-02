@@ -1,32 +1,40 @@
 <h1>Count Tracker</h1>
-<hr />
-
-<button type=button (click)="AddTracker()">ADD</button>
 
 <table id="table" class="table-striped table-hover" align="center">
   <tr>
+    <th class="vertical-border">
+      <button class="pointer" type=button (click)="AddTracker()">ADD</button>
+    </th>
     <th></th>
-    <th class="vertical-border">TITLE</th>
+    <th class="vertical-border">
+      TITLE
+    </th>
     <th></th>
-    <th>COUNTER</th>
+    <th>
+      COUNTER
+    </th>
     <th></th>
   </tr>
   <tr *ngFor="let tracker of trackers; index as idx">
-    <td>
-      <i class="fa fa-trash pointer" (click)="DeleteTracker(idx)"></i>
+    <td class="vertical-border">
+      #{{idx + 1}}
+    </td>
+    <td style="padding-left: 0.5em; padding-right: 0.5em;">
+      <button class="pointer" [disabled]="isOnlyOneTracker">
+        <i class="fa fa-trash" (click)="DeleteTracker(idx)"></i>
+      </button>
     </td>
     <td class="vertical-border">
-      <input type="text" placeholder="{{tracker.title}}"/>
-      {{tracker.title}}
+      <input type="text" style="text-align: center;" [(ngModel)]="tracker.title"/>
+    </td>
+    <td style="padding-left: 0.5em">
+      <button id="plus-button" class="btn btn-primary btn-lg" type="button" (click)="AddOne(idx)">+</button>
     </td>
     <td>
-      <button id="plus-button" type="button" class="btn btn-primary btn-lg" (click)="AddOne(idx)">+</button>
+      <input style="width: 2em; text-align: center; font-size: 2em" type="number" [(ngModel)]="tracker.counter" />
     </td>
     <td>
-      {{tracker.counter}}
-    </td>
-    <td>
-      <button id="minus-button" type="button" class="btn btn-secondary btn-lg" (click)="MinusOne(idx)">-</button>
+      <button id="minus-button" class="btn btn-secondary btn-lg" type="button" (click)="MinusOne(idx)">-</button>
     </td>
   </tr>
 </table>
