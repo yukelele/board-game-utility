@@ -6,51 +6,24 @@
             <div class="d-block d-md-none d-lg-none d-xl-none">TESTISNG</div>
 
             <nav class="navbar navbar-expand-lg ">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fas fa-bars"></i>
-                    </button>
-                  
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul id=navbar class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#count-tracker" role="tab" aria-controls="count-tracker"
-                                aria-selected="true">
-                                <i class="fas fa-tally"></i>
-                                Count Tracker
-                            </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#dice-roller" role="tab" aria-controls="dice-roller"
-                                aria-selected="false">
-                                <i class="fas fa-dice"></i>
-                                Dice Roller
-                            </a>
+                            <a class="nav-link" href="#">Link</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#time-watcher" role="tab" aria-controls="time-watcher"
-                                aria-selected="false">
-                                <i class="fa fa-clock"></i>
-                                Time Watcher
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#calculator" role="tab" aria-controls="calculator"
-                                aria-selected="false">
-                                <i class="far fa-calculator-alt"></i>
-                                Calculator
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#note-taker" role="tab" aria-controls="note-taker"
-                                aria-selected="false">
-                                <i class="fas fa-sticky-note"></i>
-                                Note Taker
-                            </a>
-                        </li>
+                      
                     </ul>
-          
-                    </div>
-                  </nav>
+
+                </div>
+            </nav>
 
             <nav class="navbar navbar-expand-md">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -103,7 +76,7 @@
 
             <div class="tab-content">
                 <app-count-tracker class="tab-pane fade show active" id="count-tracker" role="tabpanel"></app-count-tracker>
-                <div class="tab-pane fade" id="dice-roller" role="tabpanel">Dice Roller</div>
+                <app-dice-roller class="tab-pane fade" id="dice-roller" role="tabpanel"></app-dice-roller>
                 <div class="tab-pane fade" id="time-watcher" role="tabpanel">Time Watcher</div>
                 <div class="tab-pane fade" id="calculator" role="tabpanel">Calculator</div>
                 <div class="tab-pane fade" id="note-taker" role="tabpanel">Note Taker</div>
