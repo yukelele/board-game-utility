@@ -1,0 +1,76 @@
+<h3 class="expression-field">
+  <span *ngIf="final_value">{{final_value}}</span>
+  <span *ngIf="!final_value">{{input1}} {{operationInput}} {{current_input}}</span>
+</h3>
+<table align="center">
+  <tr>
+    <td>
+      <button type="button" (click)="EnterInput(e)">e</button>
+    </td>
+    <td>
+      <button type="button" (click)="EnterInput(left_parathesis)">&pi;</button>
+    </td>
+    <td>
+      <button type="button" (click)="EnterInput(percentage)">%</button>
+    </td>
+    <td>
+        <button type="button" (click)="EnterInput(isCE ? ce_symbol : ac_symbol)">{{isCE ? ce_symbol : ac_symbol}}</button>
+      </td>
+  </tr>
+  <tr>
+    <td>
+      <button type="button" (click)="EnterInput(7)">7</button>
+    </td>
+    <td>
+      <button type="button" (click)="EnterInput(8)">8</button>
+    </td>
+    <td>
+      <button type="button" (click)="EnterInput(9)">9</button>
+    </td>
+    <td>
+        <button type="button" (click)="EnterInput(divide_symbol)">/</button>
+     </td>
+  </tr>
+  <tr>
+    <td>
+      <button type="button" (click)="EnterInput(4)">4</button>
+    </td>
+    <td>
+      <button type="button" (click)="EnterInput(5)">5</button>
+    </td>
+    <td>
+      <button type="button" (click)="EnterInput(6)">6</button>
+    </td>
+    <td>
+        <button type="button" (click)="EnterInput(times_symbol)">x</button>
+     </td>
+  </tr>
+  <tr>
+    <td>
+      <button type="button" (click)="EnterInput(1)">1</button>
+    </td>
+    <td>
+      <button type="button" (click)="EnterInput(2)">2</button>
+    </td>
+    <td>
+      <button type="button" (click)="EnterInput(3)">3</button>
+    </td>
+    <td>
+        <button type="button" (click)="EnterInput(minus_symbol)">-</button>
+     </td>
+  </tr>
+  <tr>
+    <td>
+       <button type="button" (click)="EnterInput(0)">0</button>
+    </td>
+    <td>
+        <button type="button" [disabled]="isDoubleValue" (click)="EnterInput(period_symbol)">.</button>
+     </td>
+     <td>
+        <button type="button" [disabled]="!haveFullExpression" (click)="EnterInput(equal_symbol)">=</button>
+     </td>
+     <td>
+        <button type="button"(click)="EnterInput(plus_symbol)">+</button>
+     </td>
+  </tr>
+</table>

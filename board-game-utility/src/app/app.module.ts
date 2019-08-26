@@ -7,12 +7,14 @@ import { CountTrackerComponent } from './count-tracker/count-tracker.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DiceRollerComponent } from './dice-roller/dice-roller.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountTrackerComponent,
-    DiceRollerComponent
+    DiceRollerComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
